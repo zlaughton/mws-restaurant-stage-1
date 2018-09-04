@@ -38,6 +38,7 @@ fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
     option.value = neighborhood;
     select.append(option);
   });
+  select.setAttribute('aria-label', 'dropdown')
 }
 
 /**
@@ -66,6 +67,7 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
     option.value = cuisine;
     select.append(option);
   });
+  select.setAttribute('aria-label', 'dropdown')
 }
 
 /**
