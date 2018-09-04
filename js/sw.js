@@ -1,1 +1,3 @@
-console.log('Hi!');
+self.addEventListener('fetch', function(event) {
+  console.log(event.request);
+})
