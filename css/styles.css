@@ -60,7 +60,7 @@ nav h1 {
 }
 nav h1 a {
   color: #fff;
-  font-size: 14pt;
+  font-size: 2em;
   font-weight: 200;
   letter-spacing: 10px;
   text-transform: uppercase;
@@ -218,6 +218,7 @@ nav h1 a {
 }
 #restaurant-img {
 	width: 90%;
+	max-width: 880px;
 }
 #restaurant-address {
   font-size: 12pt;
@@ -275,5 +276,9 @@ nav h1 a {
 @media screen and (max-width: 401px) {
 	#restaurants-list li {
 		flex-direction:column;
+	}
+
+	nav h1 a {
+		font-size: 1em;
 	}
 }
