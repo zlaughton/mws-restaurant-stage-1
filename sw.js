@@ -17,7 +17,14 @@ self.addEventListener('install', function(event) {
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request).then(function(response) {
-      return (response ? response : fetch(event.request));
+      return (response ? response : fetch(event.request))
+    })
+      // Cache any new requests. Used from https://developers.google.com/web/ilt/pwa/lab-caching-files-with-service-worker
+    .then(response => {
+      return caches.open('restaurant-reviews').then(cache => {
+        cache.put(event.request.url, response.clone());
+        return response;
+      })
     })
   )
 })
