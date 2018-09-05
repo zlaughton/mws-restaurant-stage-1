@@ -4,7 +4,7 @@ let restaurants,
 var newMap
 var markers = []
 
-navigator.serviceWorker.register('js/sw.js').then(function() {
+navigator.serviceWorker.register('/sw.js').then(function() {
   console.log('sw registered!');
 }).catch(function() {
   console.log('sw failed.');
